@@ -58,6 +58,7 @@ const Sidebar = (props) => {
               <span className={styles.label}>Home</span>
             </NavLink>
           </li>
+          {/*
           <li className={styles.navItem}>
             <NavLink
               to="/dashboard/sponsors"
@@ -68,6 +69,7 @@ const Sidebar = (props) => {
               <span className={styles.label}>Sponsors</span>
             </NavLink>
           </li>
+          */}
           <li className={styles.navItem}>
             <NavLink
               to="/dashboard/contact"

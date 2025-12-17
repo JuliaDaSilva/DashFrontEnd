@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
-import Navbar from "./Navbar"
 
 export default function Login() {
   const { login } = useAuth();
@@ -21,8 +20,6 @@ export default function Login() {
 
   return (
     <>
-        <Navbar />
-
         <div className="overflow-hidden relative w-screen min-h-screen bg-gradient-to-b top-0 from-[#FFF9F6] to-[#FFE2D5] justify-center items-center">
         <img src="src/assets/girl-with-balloons.png" alt="Image of a girl with balloons" className="absolute md:w-[80vw] w-[100vw] -bottom-[-.05vw] -right-[20.5vw]"/>
           <div className="relative z-10 w-full font-[Nobile] max-w-4xl transform scale-90 md:scale-100 my-20 my-60 lg:mx-30 p-4 md:p-8">

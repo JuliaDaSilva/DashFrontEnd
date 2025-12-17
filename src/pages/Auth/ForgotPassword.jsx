@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
-import Navbar from "./Navbar"
 
 export default function ForgotPassword() {
 
@@ -17,10 +16,6 @@ export default function ForgotPassword() {
 
   return (
     <>
-
-    <Navbar />
-
-
         <div className="overflow-hidden relative w-screen min-h-screen bg-gradient-to-b top-0 from-[#FFF9F6] to-[#FFE2D5] justify-center items-center">
           <div className="relative z-10 w-full font-[Nobile] max-w-4xl transform scale-90 md:scale-100 my-20 my-60 mx-10 lg:mx-30 p-4 md:p-8">
           <h1 className="text-[#412200] font-bold text-4xl sm:text-5xl mb-15">Password Reset</h1>

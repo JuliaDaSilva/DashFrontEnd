@@ -24,7 +24,7 @@ function Navbar() {
             <div className={`flex-col lg:flex-row lg:flex gap-12 items-center absolute lg:static top-full left-0 right-0 w-full lg:w-auto bg-[rgba(255,249,246,0.85)] lg:bg-transparent p-8 lg:p-0 showdow-md lg:shadow-none ${isNavActive ? 'flex' : 'hidden lg:flex'}`}>
                 <NavLink to="/dashboard/home" className="text-[#412200] font-medium hover:text-[#D1A996] text-base lg:text-[22px] text-center ml-3">Home</NavLink>
                 <NavLink to="/dashboard/aboutus" className="text-[#412200] font-medium hover:text-[#D1A996] text-base lg:text-[22px] text-center">About Us</NavLink>
-                <NavLink to="/dashboard/sponsors" className="text-[#412200] font-medium hover:text-[#D1A996] text-base lg:text-[22px] text-center">Sponsors</NavLink>
+               {/* <NavLink to="/dashboard/sponsors" className="text-[#412200] font-medium hover:text-[#D1A996] text-base lg:text-[22px] text-center">Sponsors</NavLink>*/}
                 <NavLink to="/dashboard/faq" className="text-[#412200] font-medium hover:text-[#D1A996] text-base lg:text-[22px] text-center">FAQ</NavLink>
                 <NavLink to="/dashboard/contact" className="text-[#412200] font-medium hover:text-[#D1A996] text-base lg:text-[22px] text-center">Contact Us</NavLink>
                 <NavLink to="/login"> <button className="bg-[#BD7777] text-white border-2 border-[#BD7777] rounded-xl py-2 px-5 text-sm lg:text-[22px] mt-2 lg:mt-0">Login</button></NavLink>
