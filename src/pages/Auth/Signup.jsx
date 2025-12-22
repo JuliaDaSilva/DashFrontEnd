@@ -1,3 +1,5 @@
+import GirlWithBalloons from "../../assets/girl-with-balloons.png";
+
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
@@ -32,6 +34,11 @@ export default function Signup() {
   return (
     <>
       <div className="overflow-hidden relative w-screen min-h-screen bg-gradient-to-b from-[#FFF9F6] to-[#FFE2D5] flex justify-center items-center">
+        <img
+          src={GirlWithBalloons}
+          alt="Image of a girl with balloons"
+          className="absolute md:w-[80vw] w-[100vw] -bottom-[-.05vw] -right-[20.5vw]"
+        />
 
         <div className="relative z-10 w-full font-[Nobile] max-w-4xl transform scale-90 md:scale-100 my-40 mx-auto p-4 md:p-8">
           <h1 className="text-[#412200] font-bold text-4xl sm:text-5xl mb-6">
