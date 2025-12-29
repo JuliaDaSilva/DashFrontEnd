@@ -87,7 +87,7 @@ export default function AdminViewApplication() {
 
         {app.resumeUrl ? (
           <a
-            href={`http://localhost:5000${app.resumeUrl}`}
+            href={`https://ellehacks-backend.onrender.com${app.resumeUrl}`}
             target="_blank"
             rel="noopener noreferrer"
             style={styles.resumeButton}
