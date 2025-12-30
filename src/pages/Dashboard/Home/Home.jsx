@@ -12,6 +12,19 @@ const Home = () => {
         <div className={styles.divider}></div>
         <h1 className={styles.greeting}>Hi, {firstName}!</h1>
         <p className={styles.welcome}>Welcome to ElleHacks 26</p>
+        <p className={styles.description}>
+          ElleHacks 26 is a free, student-run, and beginner-friendly hackathon that serves
+          as a canvas to pitch bold solutions to global challenges, participate in
+          engaging workshops, and connect with a diverse community of recruiters,
+          industry professionals, and peers.
+        </p>
+
+        <p className={styles.description}>
+          To get started, click on the <strong>"Application Form"</strong> to submit your
+          hacker application. Once submitted, you’ll be able to track the status of
+          your application.
+        </p>
+
       </div>
     </div>
   );
