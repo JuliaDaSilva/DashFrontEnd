@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Nobile:wght@400;500;700&display=swap');
 
 .revert-tailwind {
-  all: initial; /* Resets all properties to their initial values */
+  all: initial;
+  /* Resets all properties to their initial values */
 }
 
-html, body {
+html,
+body {
   min-height: 100%;
 }
 
@@ -145,7 +147,7 @@ h2 {
   margin: 2rem auto;
   padding: 2rem;
   border-radius: 20px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   position: relative;
 }
 
@@ -175,7 +177,8 @@ label {
   font-weight: 500;
 }
 
-input, select {
+input,
+select {
   padding: 0.6rem;
   border-radius: 10px;
   border: 1px solid #ccc;
@@ -184,7 +187,8 @@ input, select {
   color: #412200;
 }
 
-.radio-group, .radio-block {
+.radio-group,
+.radio-block {
   margin-top: 1rem;
   margin-bottom: 1rem;
   display: flex;
@@ -193,7 +197,7 @@ input, select {
 }
 
 .agreement label,
-.radio-group label, 
+.radio-group label,
 .radio-block label,
 .checkbox-grid label {
   display: flex;
@@ -312,7 +316,8 @@ input, select {
   align-self: flex-start;
 }
 
-.btnBack, .btnNext {
+.btnBack,
+.btnNext {
   font-family: 'Nobile', sans-serif;
   padding: 0.6em 1.2em;
   color: #FFFFFF;
@@ -330,7 +335,8 @@ input, select {
   /* align-items: center; */
 }
 
-.btnBack:hover, .btnNext:hover {
+.btnBack:hover,
+.btnNext:hover {
   background-color: #a66565;
 }
 
@@ -353,4 +359,252 @@ input, select {
 #whyElleHacks {
   background-color: white;
   border: 2px solid #BD7777;
+}
+
+@media (max-width: 900px) {
+
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  .App {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 0;
+    padding: 1rem;
+    align-items: stretch;
+    overflow-x: hidden;
+  }
+
+  /* ===== HEADER ===== */
+  .header {
+    position: relative;
+    top: 0;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .header-banner {
+    position: relative;
+    top: 0;
+    width: min(95%, 575px);
+    max-width: 100%;
+    height: auto;
+    max-height: none;
+    display: block;
+    z-index: 0;
+  }
+
+  .header h1 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: min(90%, 575px);
+    margin: 0;
+    padding: 0 16px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.2;
+    z-index: 1;
+    box-sizing: border-box;
+  }
+
+  /* ===== SECTION HEADERS ===== */
+  .section-header {
+    position: relative;
+    top: auto;
+    right: auto;
+    left: auto;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .section-banner {
+    position: relative;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: block;
+    margin: 0 auto;
+    width: min(95%, 575px);
+    max-width: 100%;
+    height: auto;
+  }
+
+  .section-header h2 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 0 16px;
+    width: min(95%, 575px);
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+    z-index: 1;
+    pointer-events: none;
+    box-sizing: border-box;
+  }
+
+  .section-header.york-header,
+  .section-header.resume-header,
+  .section-header.event-header,
+  .section-header.questions-header {
+    left: 0;
+  }
+
+  /* ===== CARDS ===== */
+  .info-card,
+  .agreement,
+  .form-section {
+    width: 100%;
+    max-width: 100%;
+    margin: 1rem auto;
+    padding: 1.25rem;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  /* ===== STEP 1 AGREEMENT (FIX RADIO IN MIDDLE) ===== */
+  .agreement label {
+    display: grid;
+    grid-template-columns: 24px 1fr;
+    align-items: start;
+    column-gap: 10px;
+    width: 100%;
+    max-width: 100%;
+    white-space: normal;
+  }
+
+  .agreement label input[type="radio"] {
+    margin: 2px 0 0 0;
+    justify-self: start;
+  }
+
+  /* ===== FORCE STACKING ===== */
+  .form-grid {
+    grid-template-columns: 1fr;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  input,
+  select,
+  textarea {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* ===== RADIO / CHECKBOX GROUPS (GRID FIX) ===== */
+  .radio-group,
+  .radio-block {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .checkbox-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 1rem 0;
+  }
+
+  .radio-group label,
+  .radio-block label,
+  .checkbox-grid label {
+    display: grid;
+    grid-template-columns: 24px 1fr;
+    column-gap: 12px;
+    align-items: start;
+    width: 100%;
+    line-height: 1.4;
+    white-space: normal;
+  }
+
+  .radio-group input[type="radio"],
+  .radio-block input[type="radio"],
+  .checkbox-grid input[type="checkbox"] {
+    margin: 2px 0 0 0;
+    justify-self: start;
+  }
+
+  .checkbox-grid input[type="text"] {
+    grid-column: 2;
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+
+  /* ===== BUTTONS ===== */
+  .button-row {
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .btnBack,
+  .btnNext {
+    width: 110px;
+    font-size: 16px;
+  }
+
+  /* ===== DECOR (CAUSE OVERFLOW) ===== */
+  .balloons-country-bg,
+  .balloons-education,
+  .cord,
+  .flask,
+  .gears {
+    display: none;
+  }
+
+  .hats,
+  .mouse {
+    margin-left: 0;
+    align-self: flex-end;
+    max-width: 40vw;
+    height: auto;
+  }
+
+  .girl {
+    width: 45%;
+    top: 20px;
+  }
+
+  /* ===== STATUS PAGE ===== */
+  .status-page {
+    position: relative;
+    top: 0;
+    width: 100%;
+    font-size: 18px;
+    margin-top: 1rem;
+    box-sizing: border-box;
+  }
+
+  #requests {
+    background-color: #ffffff;
+    border: 2px solid #BD7777;
+    border-radius: 12px;
+    padding: 12px;
+    font-family: 'Nobile', sans-serif;
+    box-sizing: border-box;
+  }
+
 }
