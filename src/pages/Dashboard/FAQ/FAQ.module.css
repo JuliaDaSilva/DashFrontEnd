@@ -84,3 +84,48 @@
     font-family: 'Nobile', sans-serif;
     padding: 10px;
 }
+
+@media (max-width: 900px) {
+  .container {
+    left: 0;
+  }
+
+  .content {
+    margin: 55px 16px;
+    width: calc(100% - 32px);
+    padding: 0 16px;
+    border-radius: 30px;
+  }
+
+  .title {
+    left: 16px;
+    top: 20px;
+  }
+
+  .divider {
+    left: 16px;
+    top: 70px;
+    width: calc(100% - 32px);
+  }
+
+  .greeting {
+    margin-left: 0;
+    width: 100%;
+    margin-top: 110px;
+    font-size: 24px;
+  }
+
+  .QandA {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .question {
+    padding: 14px;
+    border-radius: 12px;
+  }
+
+  .answer {
+    font-size: 16px;
+  }
+}
