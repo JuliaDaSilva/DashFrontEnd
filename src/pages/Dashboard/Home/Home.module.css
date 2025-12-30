@@ -1,7 +1,7 @@
 .container {
   position: fixed;
   top: 0;
-  left: clamp(200px, 18vw, 260px); /* matches sidebar width */
+  left: clamp(200px, 18vw, 260px);
   right: 0;
   height: 100vh;
   background: #FFE2D5;
@@ -10,17 +10,18 @@
 }
 
 .content {
-  position: relative; /* changed from absolute */
-  margin: 48px auto 48px 100px; /* centering with left offset */
+  position: relative;
+  margin: 48px auto 48px 100px;
   max-width: 1700px;
-  width: calc(100% - 150px); /* responsive width with margins */
+  width: calc(100% - 150px);
   min-height: 940px;
   background: #FFF9F6;
   border-radius: 55px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 0 50px;
+  padding: 340px 50px 60px;
+
   box-sizing: border-box;
 }
 
@@ -28,7 +29,7 @@
   position: absolute;
   left: 94px;
   top: 65px;
-  font-family: 'Nobile', sans-serif;
+  font-family: "Nobile", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: clamp(24px, 3vw, 35px);
@@ -38,7 +39,7 @@
 
 .divider {
   position: absolute;
-  width: calc(100% - 188px); /* responsive width */
+  width: calc(100% - 188px);
   max-width: 1490px;
   left: 94px;
   top: 145px;
@@ -51,7 +52,7 @@
   width: calc(100% - 188px);
   left: 94px;
   top: 185px;
-  font-family: 'Nobile', sans-serif;
+  font-family: "Nobile", sans-serif;
   font-style: normal;
   font-weight: 650;
   font-size: clamp(32px, 5vw, 60px);
@@ -68,7 +69,7 @@
   width: calc(100% - 188px);
   left: 94px;
   top: 270px;
-  font-family: 'Nobile', sans-serif;
+  font-family: "Nobile", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: clamp(18px, 2.5vw, 28px);
@@ -78,41 +79,54 @@
   color: #412200;
 }
 
-/* Mobile view */
+.description {
+  margin-left: 44px;
+  max-width: 980px;
+  font-family: "Nobile", sans-serif;
+  font-size: clamp(18px, 1.4vw, 30px);
+  line-height: 1.7;
+  color: #412200;
+  margin-bottom: 18px;
+}
+
 @media (max-width: 900px) {
   .container {
-      left: 0; /* snap to left edge when sidebar disappears */
+    left: 0;
   }
 
   .content {
-      margin: 55px 40px;
-      width: calc(100% - 80px);
-      padding: 0 30px;
-      border-radius: 30px;
-      overflow-y: auto; /* enable scrolling within content */
-      max-height: calc(100vh - 80px);
+    margin: 55px 40px;
+    width: calc(100% - 80px);
+    padding: 240px 30px 40px;
+    border-radius: 30px;
+    overflow-y: auto;
+    max-height: calc(100vh - 80px);
   }
 
   .sectionTitle {
-      left: 30px;
-      top: 20px;
+    left: 30px;
+    top: 20px;
   }
 
   .divider {
-      left: 30px;
-      width: calc(100% - 60px);
-      top: 75px;
+    left: 30px;
+    width: calc(100% - 60px);
+    top: 75px;
   }
 
   .greeting {
-      left: 30px;
-      top: 110px;
-      width: calc(100% - 60px);
+    left: 30px;
+    top: 110px;
+    width: calc(100% - 60px);
   }
 
   .welcome {
-      left: 30px;
-      top: 175px;
-      width: calc(100% - 60px);
+    left: 30px;
+    top: 175px;
+    width: calc(100% - 60px);
+  }
+
+  .description {
+    margin-left: 0;
   }
 }
