@@ -79,6 +79,10 @@
   box-sizing: border-box;
 }
 
+.answer{
+    color: black;
+    font-family: 'Nobile', sans-serif;
+    padding: 10px;
 .answer {
   color: black;
   font-family: "Nobile", sans-serif;
@@ -130,4 +134,5 @@
   .answer {
     font-size: 16px;
   }
+}
 }
