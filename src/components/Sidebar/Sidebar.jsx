@@ -126,10 +126,12 @@ const Sidebar = (props) => {
             <img src={iconHome} alt="Home" className={styles.icon} />
             <span>Home</span>
           </NavLink>
+          {/*
           <NavLink to="/dashboard/sponsors" className={styles.mobileLink} onClick={handleNavClick}>
             <img src={iconSponsors} alt="Sponsors" className={styles.icon} />
             <span>Sponsors</span>
           </NavLink>
+          */}
           <NavLink to="/dashboard/contact" className={styles.mobileLink} onClick={handleNavClick}>
             <img src={iconContact} alt="Contact" className={styles.icon} />
             <span>Contact</span>
