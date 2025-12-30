@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useAdminAuth } from "../context/AdminAuthContext";
 import API from "../utils/api";
 import { useNavigate } from "react-router-dom";
+import "./AdminDash.css";
 
 export default function AdminDashboard() {
   const { adminToken, logoutAdmin } = useAdminAuth();
