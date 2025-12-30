@@ -259,7 +259,7 @@ useEffect(() => {
               resume close by! No skill-testing or long questions involved 🙂
             </p>
             <p className="deadline">
-              🕒 <strong>Application Deadline:</strong> IDK YET @ 11:59 PM
+              🕒 <strong>Application Deadline:</strong> January 11, 2026 @ 11:59 PM
             </p>
             <h3>👧 What is ElleHacks?</h3>
             <p>
@@ -323,7 +323,7 @@ useEffect(() => {
               <label>Pronouns*<input type="text" name="pronouns" value={formData.pronouns} onChange={handleChange} required /></label>
               <label>Email Address*<input type="email" name="email" value={formData.email} onChange={handleChange} placeholder="ex. mary.smith@example.com" required /></label>
               <label>Phone Number*<input type="tel" name="phone" value={formData.phone} onChange={handleChange} required /></label>
-              <label>What will be your age as of January 23, 2026?*<input type="number" name="ageOnEvent" value={formData.ageOnEvent} onChange={handleChange} min="13" required /></label>
+              <label>What will be your age as of January 30, 2026?*<input type="number" name="ageOnEvent" value={formData.ageOnEvent} onChange={handleChange} min="13" required /></label>
             </div>
             <div className="button-row">
               <button className="btnBack" onClick={prevStep}>Back</button>
