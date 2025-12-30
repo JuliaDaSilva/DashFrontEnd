@@ -29,7 +29,7 @@ export default function ForgotPassword() {
           className="absolute md:w-[80vw] w-[100vw] -bottom-[-.05vw] -right-[20.5vw]"
         />
 
-        <div className="relative z-10 w-full font-[Nobile] max-w-4xl transform scale-90 md:scale-100 my-20 my-60 mx-10 lg:mx-30 p-4 md:p-8">
+        <div className="relative z-10 w-full font-[Nobile] mt-15 mb-15 max-w-4xl transform scale-90 md:scale-100 my-20 my-60 mx-10 lg:mx-30 p-4 md:p-8">
           <h1 className="text-[#412200] font-bold text-4xl sm:text-5xl mb-15">
             Password Reset
           </h1>
