@@ -1,0 +1,143 @@
+.admin-dashboard {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, sans-serif;
+  background-color: #f7f8fa;
+  min-height: 100vh;
+}
+
+.admin-dashboard h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.admin-dashboard h2 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  color: #333;
+}
+
+.admin-dashboard > button {
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background-color: #e53935;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.admin-dashboard > button:hover {
+  background-color: #c62828;
+}
+
+.admin-app-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.admin-app-card h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #222;
+}
+
+.admin-app-card p {
+  margin: 0;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.admin-app-card button {
+  align-self: flex-start;
+  margin-top: 0.75rem;
+  padding: 0.5rem 1rem;
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.admin-app-card button:hover {
+  background-color: #1565c0;
+}
+
+.admin-app-card select {
+  margin-top: 0.75rem;
+  width: 180px;
+  padding: 0.45rem 0.6rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 0.9rem;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.admin-app-card p:last-of-type {
+  font-weight: 500;
+}
+
+.admin-app-card p:has(+ button) {
+  margin-bottom: 0.25rem;
+}
+
+.admin-app-card:has(select option:checked[value="submitted"]) button {
+  background-color: #6c757d;
+}
+.admin-app-card:has(select option:checked[value="submitted"]) button:hover {
+  background-color: #5a6268;
+}
+
+.admin-app-card:has(select option:checked[value="reviewing"]) button {
+  background-color: #f9a825;
+}
+.admin-app-card:has(select option:checked[value="reviewing"]) button:hover {
+  background-color: #f57f17;
+}
+
+.admin-app-card:has(select option:checked[value="accepted"]) button {
+  background-color: #2e7d32;
+}
+.admin-app-card:has(select option:checked[value="accepted"]) button:hover {
+  background-color: #1b5e20;
+}
+
+.admin-app-card:has(select option:checked[value="waitlist"]) button {
+  background-color: #1565c0;
+}
+.admin-app-card:has(select option:checked[value="waitlist"]) button:hover {
+  background-color: #0d47a1;
+}
+
+.admin-app-card:has(select option:checked[value="rejected"]) button {
+  background-color: #c62828;
+}
+.admin-app-card:has(select option:checked[value="rejected"]) button:hover {
+  background-color: #b71c1c;
+}
+
+@media (max-width: 600px) {
+  .admin-dashboard {
+    padding: 1rem;
+  }
+
+  .admin-app-card {
+    padding: 1rem;
+  }
+
+  .admin-app-card select {
+    width: 100%;
+  }
+}
