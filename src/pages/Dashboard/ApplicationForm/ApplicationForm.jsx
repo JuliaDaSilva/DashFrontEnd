@@ -265,7 +265,7 @@ useEffect(() => {
             <p>
               Hello! We’re ElleHacks, one of Canada’s largest hackathons for women &
               gender-diverse students! This event will take place on{" "}
-              <strong>January 23–25, 2026</strong> from Friday afternoon to Sunday
+              <strong>January 30–February 1, 2026</strong> from Friday afternoon to Sunday
               evening at York University’s Keele campus in Toronto, Ontario. We have
               overnight accommodations, but you are not required to stay overnight.
             </p>
