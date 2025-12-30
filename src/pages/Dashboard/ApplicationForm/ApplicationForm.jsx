@@ -5,7 +5,6 @@ import { useAuth } from "../../../context/AuthContext";
 // import Navbar from "../../../components/Navbar/Navbar.jsx";
 import Sidebar from '../../../components/Sidebar/Sidebar.jsx';
 
-// Import images from the assets folder
 import partyPopper from "../../../assets/ApplicationForm/party-popper.png";
 import balloon10 from "../../../assets/ApplicationForm/balloon-10.png";
 import headphones from "../../../assets/ApplicationForm/headphones.png";
