@@ -78,12 +78,23 @@ export default function Login() {
               />
             </div>
 
+            {/*
             <p className="py-8">
               <Link
                 to="/forgotpassword"
                 className="text-[#412200] font-medium text-lg sm:text-2xl underline"
               >
                 Forgot your password?
+              </Link>
+            </p>
+            */}
+
+            <p className="py-8">
+              <Link
+                to="https://ellehacks.com/#contactus"
+                className="text-[#412200] font-medium text-lg sm:text-2xl underline"
+              >
+                Please contact us if you forgot your password.
               </Link>
             </p>
 
