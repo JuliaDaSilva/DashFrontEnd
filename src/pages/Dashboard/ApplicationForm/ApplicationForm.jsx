@@ -259,7 +259,7 @@ useEffect(() => {
               resume close by! No skill-testing or long questions involved 🙂
             </p>
             <p className="deadline">
-              🕒 <strong>Application Deadline:</strong> January 11, 2026 @ 11:59 PM
+              🕒 <strong>Application Deadline:</strong> EXTENDED TO JANUARY 17, 2026 @ 11:59 PM
             </p>
             <h3>👧 What is ElleHacks?</h3>
             <p>
