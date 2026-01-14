@@ -1,0 +1,60 @@
+.admin-login {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Arial, sans-serif;
+    padding: 20px;
+
+    background: #FFE5C0;
+}
+
+.admin-login h1 {
+    margin-bottom: 22px;
+    font-size: 2.1rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: black;
+}
+
+.admin-login form {
+    width: 100%;
+    max-width: 380px;
+    padding: 25px;
+    border-radius: 16px;
+
+    background: white;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    border: 2px solid black;
+}
+
+.admin-login input {
+    padding: 12px 14px;
+    border-radius: 10px;
+    font-size: 1rem;
+    border: 2px solid black;
+    outline: none;
+}
+
+.admin-login button {
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    color: white;
+    background-color: black;
+
+    transition: 0.2s ease-in-out;
+}
+
+.admin-login button:hover {
+    background-color: gray;
+}
