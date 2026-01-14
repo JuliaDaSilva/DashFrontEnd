@@ -78,7 +78,7 @@ export default function Login() {
               />
             </div>
 
-            {/*
+            {/* Removal of Proper text until patch has been deployed
             <p className="py-8">
               <Link
                 to="/forgotpassword"
