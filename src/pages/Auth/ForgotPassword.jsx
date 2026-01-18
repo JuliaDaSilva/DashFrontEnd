@@ -1,132 +1,63 @@
-import GirlWithBalloons from "../../assets/girl-with-balloons.png";
-
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { useAuth } from "../../context/AuthContext";
 
 export default function ForgotPassword() {
-  const { forgotPassword } = useAuth();
-  const navigate = useNavigate();
-  const [form, setForm] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    newPassword: "",
-  });
-  const [error, setError] = useState("");
+  const [email, setEmail] = useState("");
+  const [msg, setMsg] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    navigate("/verifycode"); // user detail verification setup and code verification still needs to be set up.
+    setMsg("");
+    setLoading(true);
+
+    try {
+      const res = await fetch(
+        `${import.meta.env.VITE_API_URL}/api/auth/forgot-password`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ email }),
+        }
+      );
+
+      const data = await res.json();
+      // backend returns generic message even if email doesn't exist
+      setMsg(data.message || "If that email exists, we sent a reset link.");
+    } catch (err) {
+      setMsg("Network error. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
-    <>
-      <div className="overflow-hidden relative w-screen min-h-screen bg-gradient-to-b top-0 from-[#FFF9F6] to-[#FFE2D5] justify-center items-center">
-        <img
-          src={GirlWithBalloons}
-          alt="Image of a girl with balloons"
-          className="absolute md:w-[80vw] w-[100vw] -bottom-[-.05vw] -right-[20.5vw]"
-        />
+    <div className="min-h-screen flex items-center justify-center p-4">
+      <div className="w-full max-w-md bg-white p-6 rounded-xl shadow">
+        <h1 className="text-2xl font-semibold mb-2">Forgot Password</h1>
+        <p className="text-sm text-gray-600 mb-6">
+          Enter your email and we’ll send you a reset link.
+        </p>
 
-        <div className="relative z-10 w-full font-[Nobile] mt-15 mb-15 max-w-4xl transform scale-90 md:scale-100 my-20 my-60 mx-10 lg:mx-30 p-4 md:p-8">
-          <h1 className="text-[#412200] font-bold text-4xl sm:text-5xl mb-15">
-            Password Reset
-          </h1>
+        <form onSubmit={handleSubmit} className="space-y-4">
+          <input
+            type="email"
+            className="w-full border rounded-lg p-2"
+            placeholder="you@example.com"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
 
-          <form
-            onSubmit={handleSubmit}
-            className="flex flex-col gap-4 lg:flex-col md:gap-6 w-full max-w-xs lg:max-w-full"
+          {msg && <div className="text-sm bg-gray-100 p-2 rounded-lg">{msg}</div>}
+
+          <button
+            disabled={loading}
+            className="w-full bg-black text-white rounded-lg py-2 disabled:opacity-60"
           >
-            <div className="flex flex-col gap-2">
-              <label
-                htmlFor="firstName"
-                className="font-bold text-2xl sm:text-2xl text-[#412200]"
-              >
-                First Name*
-              </label>
-              <input
-                id="firstName"
-                type="text"
-                value={form.firstName}
-                onChange={(e) =>
-                  setForm({ ...form, firstName: e.target.value })
-                }
-                required
-                className="w-full h-14 sm:h-14 border-2 border-[#BD7777] rounded-lg px-4 mb-10 text-lg sm:text-xl font-medium text-[#BD7777] bg-white"
-              />
-            </div>
-
-            <div className="flex flex-col gap-2">
-              <label
-                htmlFor="lastName"
-                className="font-bold text-2xl sm:text-2xl text-[#412200]"
-              >
-                Last Name*
-              </label>
-              <input
-                id="lastName"
-                type="text"
-                value={form.lastName}
-                onChange={(e) =>
-                  setForm({ ...form, lastName: e.target.value })
-                }
-                required
-                className="w-full h-14 sm:h-14 border-2 border-[#BD7777] rounded-lg px-4 mb-10 text-lg sm:text-xl font-medium text-[#BD7777] bg-white"
-              />
-            </div>
-
-            <div className="flex flex-col gap-2">
-              <label
-                htmlFor="email"
-                className="font-bold text-2xl sm:text-2xl text-[#412200]"
-              >
-                Email Address*
-              </label>
-              <input
-                id="email"
-                type="email"
-                value={form.email}
-                onChange={(e) => setForm({ ...form, email: e.target.value })}
-                required
-                className="w-full h-14 sm:h-14 border-2 border-[#BD7777] rounded-lg px-4 mb-10 text-lg sm:text-xl font-medium text-[#BD7777] bg-white"
-              />
-            </div>
-
-            <div className="flex flex-col gap-2">
-              <label
-                htmlFor="password"
-                className="font-bold text-2xl sm:text-2xl text-[#412200]"
-              >
-                Password*
-              </label>
-              <input
-                id="password"
-                type="password"
-                value={form.newPassword}
-                onChange={(e) =>
-                  setForm({ ...form, newPassword: e.target.value })
-                }
-                required
-                className="w-full h-14 sm:h-14 border-2 border-[#BD7777] rounded-lg px-4 mb-10 text-lg sm:text-xl font-medium text-[#BD7777] bg-white"
-              />
-            </div>
-
-            {error && (
-              <p className="text-[#412200] font-medium text-lg sm:text-xl w-4/5 md:w-full">
-                {error}
-              </p>
-            )}
-
-            <button
-              type="submit"
-              className="w-full sm:w-50 h-20 sm:h-20 bg-[#BD7777] text-white border-[#BD7777] rounded-2xl font-medium text-2xl sm:text-3xl cursor-pointer"
-            >
-              Submit
-            </button>
-          </form>
-        </div>
+            {loading ? "Sending..." : "Send reset link"}
+          </button>
+        </form>
       </div>
-    </>
+    </div>
   );
 }
