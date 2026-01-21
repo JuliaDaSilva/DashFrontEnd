@@ -19,7 +19,7 @@ const FAQ = () => {
                 <div className = {styles.question}>What in-person accomodations are available?</div>
                 <p className = {styles.answer}>Hackers have the option of staying overnight! You're free to come and go as you please. Sleeping rooms will be provided.</p>
                 <div className = {styles.question}>When is the last day to sign up?</div>
-                <p className = {styles.answer}>Applications will open closer to the event date. The deadline to apply is TBD.</p>
+                <p className = {styles.answer}>Applications are now closed. Please check your application status to see whether you have been accepted.</p>
                 <div className = {styles.question}>Will there be swag?</div>
                 <p className = {styles.answer}>Yes!!</p>
                 <div className = {styles.question}>Do I need to find a team?</div>

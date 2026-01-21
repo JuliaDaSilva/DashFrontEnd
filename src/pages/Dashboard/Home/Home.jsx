@@ -20,15 +20,8 @@ const Home = () => {
         </p>
 
         <p className={styles.description}>
-          To get started, click on the <strong>"Application Form"</strong> to submit your
-          hacker application. Once submitted, you’ll be able to track the status of
-          your application.
+          Thank you for applying! Once applications close, we’ll review your submission. Please check back on your application status to see whether or not you have been accepted, and keep an eye on your email for updates and next steps.
         </p>
-
-        <p className={styles.description}>
-          Once applications close, we’ll review your submission. Keep an eye on your email for updates and next steps.
-        </p>
-
 
       </div>
     </div>
