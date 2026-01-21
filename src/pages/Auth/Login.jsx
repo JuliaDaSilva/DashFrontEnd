@@ -81,7 +81,7 @@ export default function Login() {
             {/* Removal of Proper text until patch has been deployed
             <p className="py-8">
               <Link
-                to="/forgotpassword"
+                to="/forgot-password"
                 className="text-[#412200] font-medium text-lg sm:text-2xl underline"
               >
                 Forgot your password?
